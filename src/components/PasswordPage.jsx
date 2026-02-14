@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const WORD_PUZZLES = [
-  { word: 'OMOJO', hint: 'The answer is a name you love to be called!' },
+  { word: 'OMOJO', hint: 'What name do I call you most?' },
   { word: 'AWESOME', hint: 'My best description of your personality?' },
 ];
 
@@ -33,7 +33,7 @@ const PasswordPage = ({ onSuccess }) => {
 
   function shuffleLetters(word) {
     const allLetters = word.split('');
-    const extraLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'M'];
+    const extraLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     const combined = [...allLetters, ...extraLetters.filter(() => Math.random() > 0.5)].slice(0, 12);
     return combined.sort(() => Math.random() - 0.5).map((letter, idx) => ({
       id: idx,
